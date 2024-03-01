@@ -1,0 +1,5 @@
+<!-- myapp/templates/myapp/course_detail.html -->
+<h2>{{ course.title }}</h2>
+<p>{{ course.description }}</p>
+<p>Rate: {{ course.rate }}</p>
+<a href="{% url 'rate_course' course.id %}">Rate this course</a>

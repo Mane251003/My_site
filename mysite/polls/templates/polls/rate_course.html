@@ -1,0 +1,8 @@
+<!-- myapp/templates/myapp/rate_course.html -->
+<h2>Rate {{ course.title }}</h2>
+<form method="post" action="">
+    {% csrf_token %}
+    <label for="rating">Enter your rating:</label>
+    <input type="number" name="rating" step="0.1" min="0" max="5" required>
+    <button type="submit">Submit</button>
+</form>
