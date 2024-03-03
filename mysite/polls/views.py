@@ -16,7 +16,6 @@ def rate_course(request, course_id):
 
     if request.method=="Post":
         new_rating=float(request.Post.get('rating'))
-        #course.rate=(course.rate*course.count+new_rating)/(course.count+1)
         course.update_rating(new_rating)
         course.count+=1
         course.save()
